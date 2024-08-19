@@ -14,12 +14,14 @@ Provide a way to integrate with Intouch
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['svs_burkina'],
+    'depends': ['base'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
+        'security/ir.model.access.csv',
+        'views/transaction_request.xml',
+        'views/transaction_response.xml',
+        'views/transaction_status.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode

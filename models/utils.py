@@ -5,3 +5,9 @@ PASSWORD_AGENT = 'password_agent'
 SERVICE_CODES = [
     ("PAIEMENTMARCHANDOMPAYCIDIRECT", "PAIEMENTMARCHANDOMPAYCIDIRECT")
 ]
+
+TRANSACTION_STATUS = [
+    ("pending", "PENDING"),
+    ("success", "SUCCESS"),
+    ("failed", "FAILED")
+]
