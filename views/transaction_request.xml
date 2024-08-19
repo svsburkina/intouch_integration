@@ -1,0 +1,67 @@
+<odoo>
+    <record id="view_intouch_transaction_request_form" model="ir.ui.view">
+        <field name="name">intouch.transaction.request.form</field>
+        <field name="model">intouch_integration.transaction_request</field>
+        <field name="arch" type="xml">
+            <form string="Intouch Transaction Request">
+                <sheet>
+                    <group>
+                        <field name="transaction_request_id"/>
+                        <field name="recipient_email"/>
+                        <field name="recipient_first_name"/>
+                        <field name="recipient_last_name"/>
+                        <field name="destinataire"/>
+                        <field name="recipient_number"/>
+                        <field name="otp"/>
+                        <field name="amount"/>
+                        <field name="callback"/>
+                        <field name="service_code"/>
+                        <field name="transaction_status"/>
+                        <field name="error_message"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_intouch_transaction_request_tree" model="ir.ui.view">
+        <field name="name">intouch.transaction.request.tree</field>
+        <field name="model">intouch_integration.transaction_request</field>
+        <field name="arch" type="xml">
+            <tree string="Intouch Transaction Request">
+                <field name="transaction_request_id"/>
+                <field name="recipient_email"/>
+                <field name="recipient_first_name"/>
+                <field name="recipient_last_name"/>
+                <field name="destinataire"/>
+                <field name="otp"/>
+                <field name="amount"/>
+                <field name="transaction_status"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_intouch_transaction_request" model="ir.actions.act_window">
+        <field name="name">Intouch Transaction Requests</field>
+        <field name="res_model">intouch_integration.transaction_request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first transaction request
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="intouch_integration.intouch_integration_home"
+              name="Intouch"/>
+
+    <menuitem id="intouch_integration.menu_transactions_top"
+              parent="intouch_integration.intouch_integration_home"
+              name="Transactions"/>
+
+    <menuitem id="intouch_integration.menu_transaction_request"
+              name="Requests"
+              parent="intouch_integration.menu_transactions_top"
+              action="intouch_integration.action_intouch_transaction_request"
+              sequence="10"/>
+</odoo>

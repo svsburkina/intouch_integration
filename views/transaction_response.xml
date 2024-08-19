@@ -1,0 +1,45 @@
+<odoo>
+    <record id="view_intouch_transaction_response_form" model="ir.ui.view">
+        <field name="name">intouch.transaction.response.form</field>
+        <field name="model">intouch_integration.transaction_response</field>
+        <field name="arch" type="xml">
+            <form string="Intouch Transaction response">
+                <sheet>
+                    <group>
+                        <field name="transaction_request_id"/>
+                        <field name="response_response"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_intouch_transaction_response_tree" model="ir.ui.view">
+        <field name="name">intouch.transaction.response.tree</field>
+        <field name="model">intouch_integration.transaction_response</field>
+        <field name="arch" type="xml">
+            <tree string="Intouch Transaction response">
+                <field name="transaction_request_id"/>
+                <field name="response_response"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_intouch_transaction_response" model="ir.actions.act_window">
+        <field name="name">Intouch Transaction response</field>
+        <field name="res_model">intouch_integration.transaction_response</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first transaction response
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem id="intouch_integration.menu_transaction_response"
+              name="response"
+              parent="intouch_integration.menu_transactions_top"
+              action="intouch_integration.action_intouch_transaction_response"
+              sequence="20"/>
+</odoo>

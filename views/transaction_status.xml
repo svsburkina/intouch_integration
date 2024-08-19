@@ -1,0 +1,45 @@
+<odoo>
+    <record id="view_intouch_transaction_status_form" model="ir.ui.view">
+        <field name="name">intouch.transaction.status.form</field>
+        <field name="model">intouch_integration.transaction_status</field>
+        <field name="arch" type="xml">
+            <form string="Intouch Transaction status">
+                <sheet>
+                    <group>
+                        <field name="transaction_request_id"/>
+                        <field name="response_status"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_intouch_transaction_status_tree" model="ir.ui.view">
+        <field name="name">intouch.transaction.status.tree</field>
+        <field name="model">intouch_integration.transaction_status</field>
+        <field name="arch" type="xml">
+            <tree string="Intouch Transaction status">
+                <field name="transaction_request_id"/>
+                <field name="response_status"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_intouch_transaction_status" model="ir.actions.act_window">
+        <field name="name">Intouch Transaction Status</field>
+        <field name="res_model">intouch_integration.transaction_status</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first transaction status
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem id="intouch_integration.menu_transaction_status"
+              name="Status"
+              parent="intouch_integration.menu_transactions_top"
+              action="intouch_integration.action_intouch_transaction_status"
+              sequence="50"/>
+</odoo>
