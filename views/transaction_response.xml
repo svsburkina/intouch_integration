@@ -7,7 +7,6 @@
                 <sheet>
                     <group>
                         <field name="transaction_request_id"/>
-                        <field name="response_response"/>
                     </group>
                 </sheet>
             </form>
@@ -20,7 +19,6 @@
         <field name="arch" type="xml">
             <tree string="Intouch Transaction response">
                 <field name="transaction_request_id"/>
-                <field name="response_response"/>
             </tree>
         </field>
     </record>
