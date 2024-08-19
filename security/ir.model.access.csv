@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_intouch_intergration_intouch_intergration,intouch_intergration.intouch_intergration,model_intouch_intergration_intouch_intergration,base.group_user,1,1,1,1
